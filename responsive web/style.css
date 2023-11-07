@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+} 
+body{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: #1D1E23;
+}
+h1{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h1 span{
+    color: #ffae00;
+    position: relative;
+}
+h1 span::before{
+    content: "";
+    height: 30px;
+    width: 2px;
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    background: #ffae00;
+    transform: translateY(-45%);
+    animation: animate 0.7s infinite ;
+}
+h1 span.stop-blinking::before{
+    animation: none;
+}
+@keyframes animate {
+    50%{opacity: 0;}
+}
+
+#loader{
+    background: #000 url(preview.gif) no-repeat center center ;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+   
+    z-index: 100;
+    background-size: 50%;
+}
+@media screen and (max-width:600px) {
+    #loader{
+        position: fixed;
+        background-position: center;
+        background-size: 50%; 
+    }
+}
+h3{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    position:fixed;
+    top: 55%;
+    animation: down 2s linear 0.1s ;
+}
+button{
+    margin-top: 5px;
+    padding: 14px 8px;
+    color: #ffae00;
+    font-weight: 700;
+    font-size: 1rem;
+    position: fixed;
+    top: 60%;
+    background-color: #1D1E23;
+    border: 2px solid whitesmoke;
+    border-radius: 30px;
+}
+ button a{
+    color: #ffae00;
+    text-decoration: none;
+ }
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+}
+.home::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-out;
+}
+.home.show::before{
+    opacity: 1;
+    pointer-events: auto;
+}
+.form_container{
+    position: fixed;
+    max-width: 320px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+}
