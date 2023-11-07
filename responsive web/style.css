@@ -56,6 +56,12 @@ h1 span.stop-blinking::before{
         background-size: 50%; 
     }
 }
+@media screen and (max-width:480px) {
+    h1{
+      position: relative;
+        margin-bottom: 15px;
+    }
+}
 h3{
     color: #fff;
     font-size: 1rem;
@@ -108,9 +114,4 @@ button{
     top: 50%;
     left: 50%;
 }
-@media screen and (max-width:480px) {
-    h3{
-      position: relative;
-        margin-bottom: 15px;
-    }
-}
+
