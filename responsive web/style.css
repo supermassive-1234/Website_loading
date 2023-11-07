@@ -39,7 +39,12 @@ h1 span.stop-blinking::before{
 @keyframes animate {
     50%{opacity: 0;}
 }
-
+@media screen and (max-width:480px) {
+    h1{
+        position:relative;
+        padding-bottom:5px;
+    }
+}
 #loader{
     background: #000 url(preview.gif) no-repeat center center ;
     height: 100vh;
