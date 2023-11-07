@@ -41,7 +41,7 @@ h1 span.stop-blinking::before{
 }
 @media screen and (max-width:480px) {
     h1{
-        position:relative;
+        
         padding-bottom:5px;
     }
 }
