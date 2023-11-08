@@ -354,7 +354,7 @@ text-transform: uppercase;
   }
   .panel .content{
     padding: 0.5rem 1rem;
-
+    font-size: 12px;
   }
   .container::before{
     bottom: 72%;
